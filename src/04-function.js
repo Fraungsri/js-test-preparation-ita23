@@ -8,6 +8,14 @@
  * const greetJack = greetUser("Jack"); // greetJack will be "Hello, Jack"
  */
 
+const greetJack = greetUser("Jack");
+
+function greetUser(username){
+    const string = "Hello, ";
+    return string + username;
+}
+console.log(greetUser("Jack"))
+
 
 
 /**
@@ -20,6 +28,14 @@
  * const spinal = toSpinalCase("This Is Spinal Tap"); // spinal will be "this-is-spinal-tap"
  */
 
+const spinal = toSpinalCase("This Is Spinal Tap"); // spinal will be "this-is-spinal-tap"
+function toSpinalCase(str) {
+    let res = str.replace(/\s/g, "-")
+    let result = res.replace(/_/g, '').toLowerCase();
+    return result;
+}
+console.log(spinal);
+
 
 /**
  * This function calculates the time taken by light to travel a certain distance.
@@ -31,6 +47,13 @@
  * const time = lightTravelTime(300000); // time will be 1
  */
 
+const time = lightTravelTime(300000); // time will be 1
+
+function lightTravelTime(time){
+    const distance = 300000;
+    return time / distance;
+}
+console.log(time);
 
 /**
  * This function checks if two words are mirror words.
@@ -43,9 +66,12 @@
  * const isMirror = mirrorWordCheck("stressed", "desserts"); // isMirror will be true
  * const notMirror = mirrorWordCheck("hello", "world"); // notMirror will be false
  */
-function mirrorWordCheck(word1, word2) {
+const isMirror = mirrorWordCheck("stressed", "desserts"); // isMirror will be true
+const notMirror = mirrorWordCheck("hello", "world"); // notMirror will be false
 
-}
+
+function mirrorWordCheck(word1, word2) {}
+
 
 
 

@@ -8,10 +8,12 @@
  * const lastElement = getLastElement([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
  * console.log(lastElement); // 20
  */
+let lastElement = getLastElement([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
+
 function getLastElement(array) {
-
+    return array[array.length - 1];
 }
-
+console.log(lastElement); // 20
 
 /**
  * This function returns an array of even numbers from the specified start to finish.
@@ -24,10 +26,19 @@ function getLastElement(array) {
  * const numbers = returnEvenNumbers(2, 20);
  * // numbers will be [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
+
+const numbers = returnEvenNumbers(2, 20);
+
 function returnEvenNumbers(start, finish) {
-
+    const evenNumbers = [];
+    for (let i = start; i <= finish; i++) {
+        if (i % 2 === 0) {
+            evenNumbers.push(i);
+        }
+    }
+    return evenNumbers;
 }
-
+console.log(numbers);
 
 /**
  * This function returns a new array with the square of each number from the input array.
@@ -39,9 +50,21 @@ function returnEvenNumbers(start, finish) {
  * const squares = squareArray([1, 2, 3]); // squares will be [1, 4, 9]
  * const anotherSquares = squareArray([-1, -2, 3]); // anotherSquares will be [1, 4, 9]
  */
-function squareArray(array) {
 
+const squares = squareArray([1, 2, 3]);
+
+function squareArray(array) {
+    const squaredArray = [];
+    for (let i = 0; i < array.length; i++) {
+        const squared = Math.pow(array[i], 2); //
+        squaredArray.push(squared);
+    }
+    return squaredArray;
 }
+
+console.log(squares);
+
+
 
 /**
  * This function returns the maximum number in an array.
@@ -53,9 +76,13 @@ function squareArray(array) {
  * const max = findMax([1, 2, 3]); // max will be 3
  * const anotherMax = findMax([-1, -2, 3]); // anotherMax will be 3
  */
-function findMax(array) {
 
+const max = findMax([1, 2, 3]); // max will be 3
+
+function findMax(array) {
+    return array.reduce((a, b) => Math.max(a, b), -Infinity);
 }
+console.log(max);
 
 
 /**
@@ -68,6 +95,19 @@ function findMax(array) {
  * const sumOdd = sumOddIndices([10, 20, 30, 40, 50]); // sumOdd will be 60 (20 at index 1 + 40 at index 3)
  * const anotherSumOdd = sumOddIndices([1, 3, 5, 7]); // anotherSumOdd will be 10 (3 + 7)
  */
-function sumOddIndices(arr) {
 
+let sumOdd = sumOddIndices([10, 20, 30, 40, 50]);
+
+let anotherSumOdd = sumOddIndices([1, 3, 5, 7]);
+
+function sumOddIndices(arr) {
+let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+return sum;
 }
+console.log(sumOdd);
+
+console.log(anotherSumOdd);
+

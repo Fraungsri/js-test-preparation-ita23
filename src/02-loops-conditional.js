@@ -9,10 +9,8 @@
  * const anotherNextEven = getNextEven(8); // anotherNextEven will be 10
  */
 
+
 function getNextEven(n) {
-
-}
-
 
 /**
  * This function checks if a number is a multiple of another number.
@@ -59,4 +57,5 @@ function countCapitals(str) {
  */
 function countVowelsInWords(word1, word2) {
 
+}
 }

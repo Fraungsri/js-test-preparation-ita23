@@ -9,9 +9,12 @@
  * const result = add(2, 3); // result will be 5
  * const anotherResult = add(-1, 1); // anotherResult will be 0
  */
-function add(a, b) {
 
+const result = add;
+function add(a, b) {
+    return a + b;
 }
+console.log(result);
 
 /**
  * This function returns the length of the provided string.
@@ -23,9 +26,13 @@ function add(a, b) {
  * const result = determineLength("Hello"); // result will be 5
  * const anotherResult = determineLength("AB"); // anotherResult will be 2
  */
-function determineLength(value) {
+let result1 = determineLength('Hello');
 
+function determineLength(value){
+const length = value.length;
+return value.length;
 }
+console.log(length);
 
 /**
  * This function concatenates two strings with a specified delimiter.
@@ -36,9 +43,11 @@ function determineLength(value) {
  * @returns {string} - The concatenated string.
  *
  * Usage:
- * const result = concatenateWithDelimiter("Hello", "World", ", "); // result will be "Hello, World"
+ * const result = concatenateWithDelimiter("Hello",  "World", ", "); // result will be "Hello, World"
  */
+
+const result3 = concatenateWithDelimiter("Hello","World", " "," ");
 function concatenateWithDelimiter(a, b, delimiter) {
-
+return a + b + delimiter;
 }
-
+console.log(result3);
